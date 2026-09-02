@@ -1,0 +1,4 @@
+interface:
+  display_name: "Bootstrap Research OS"
+  short_description: "Create a Research OS from initial materials"
+  default_prompt: "Build my Research OS by preserving my original brain dump, mapping all initial materials, iteratively refining the manifesto, and recording actual reading coverage."

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Scout Literature"
+  short_description: "Find and rank research leads for review"
+  default_prompt: "Use $scout-literature to find and rank new literature relevant to the current research manifesto without indexing candidates."
+

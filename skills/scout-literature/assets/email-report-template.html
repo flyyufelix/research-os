@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{SUBJECT}}</title>
+</head>
+<body style="margin:0;background:#f3f6fb;color:#172033;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;">
+  <div style="display:none;max-height:0;overflow:hidden;opacity:0;">{{PREHEADER}}</div>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f3f6fb;">
+    <tr><td align="center" style="padding:28px 12px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:720px;">
+        <tr><td style="background:#102a43;padding:30px 32px;border-radius:16px 16px 0 0;">
+          <div style="font-size:12px;line-height:18px;letter-spacing:1.4px;text-transform:uppercase;color:#9fb3c8;">Research OS</div>
+          <h1 style="margin:6px 0 8px;font-size:28px;line-height:34px;color:#ffffff;">Literature Scout</h1>
+          <div style="font-size:15px;line-height:22px;color:#d9e2ec;">{{DATE_LINE}}</div>
+        </td></tr>
+        <tr><td style="background:#ffffff;padding:24px 32px 8px;">
+          <div style="background:#eaf2ff;border-left:4px solid #2f6fed;border-radius:8px;padding:16px 18px;">
+            <div style="font-size:13px;font-weight:700;color:#174ea6;text-transform:uppercase;letter-spacing:.5px;">Run summary</div>
+            <div style="margin-top:7px;font-size:15px;line-height:23px;color:#243b53;">{{RUN_SUMMARY}}</div>
+          </div>
+        </td></tr>
+        <tr><td style="background:#ffffff;padding:18px 32px 4px;">
+          <h2 style="margin:0 0 10px;font-size:18px;line-height:25px;color:#102a43;">Sources searched</h2>
+          <div style="font-size:14px;line-height:22px;color:#486581;">{{SOURCES_SEARCHED}}</div>
+          {{INACCESSIBLE_SOURCES}}
+        </td></tr>
+        <tr><td style="background:#ffffff;padding:14px 32px 4px;">
+          <h2 style="margin:0;font-size:20px;line-height:28px;color:#102a43;">Findings</h2>
+        </td></tr>
+        <!-- BEGIN FINDING -->
+        <tr><td style="background:#ffffff;padding:12px 32px;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #d9e2ec;border-radius:12px;">
+            <tr><td style="padding:20px 22px;">
+              <div style="font-size:12px;line-height:18px;font-weight:700;color:#2f6fed;text-transform:uppercase;letter-spacing:.6px;">Finding {{NUMBER}} · {{PRIORITY}} priority</div>
+              <h3 style="margin:6px 0 8px;font-size:20px;line-height:27px;color:#102a43;">{{FINDING_TITLE}}</h3>
+              <div style="font-size:13px;line-height:20px;color:#627d98;">{{BYLINE}}</div>
+              {{SOURCE_LINK}}
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:16px;">
+                <tr><td style="padding:7px 0;border-top:1px solid #edf2f7;font-size:14px;line-height:22px;"><strong style="color:#243b53;">Material examined:</strong> <span style="color:#486581;">{{MATERIAL_EXAMINED}}</span></td></tr>
+                <tr><td style="padding:7px 0;border-top:1px solid #edf2f7;font-size:14px;line-height:22px;"><strong style="color:#243b53;">Summary:</strong> <span style="color:#486581;">{{FINDING_SUMMARY}}</span></td></tr>
+                <tr><td style="padding:7px 0;border-top:1px solid #edf2f7;font-size:14px;line-height:22px;"><strong style="color:#243b53;">Research connection:</strong> <span style="color:#486581;">{{MANIFESTO_CONNECTION}}</span></td></tr>
+                <tr><td style="padding:7px 0;border-top:1px solid #edf2f7;font-size:14px;line-height:22px;"><strong style="color:#243b53;">Potential value:</strong> <span style="color:#486581;">{{POTENTIAL_VALUE}}</span></td></tr>
+                <tr><td style="padding:7px 0;border-top:1px solid #edf2f7;font-size:14px;line-height:22px;"><strong style="color:#243b53;">Caveats:</strong> <span style="color:#486581;">{{CAVEATS}}</span></td></tr>
+              </table>
+            </td></tr>
+          </table>
+        </td></tr>
+        <!-- END FINDING -->
+        {{EMPTY_FINDINGS}}
+        <tr><td style="background:#ffffff;padding:20px 32px 8px;">
+          <h2 style="margin:0 0 10px;font-size:18px;line-height:25px;color:#102a43;">Coverage and limitations</h2>
+          <div style="font-size:14px;line-height:22px;color:#486581;">
+            <p style="margin:0 0 8px;"><strong style="color:#243b53;">Coverage:</strong> {{COVERAGE}}</p>
+            <p style="margin:0 0 8px;"><strong style="color:#243b53;">Deduplication:</strong> {{DEDUPLICATION}}</p>
+            <p style="margin:0;"><strong style="color:#243b53;">Limitations:</strong> {{LIMITATIONS}}</p>
+          </div>
+        </td></tr>
+        <tr><td style="background:#ffffff;padding:18px 32px 30px;border-radius:0 0 16px 16px;">
+          <div style="background:#fff7e6;border:1px solid #ffd591;border-radius:8px;padding:14px 16px;font-size:14px;line-height:21px;color:#7a4d00;">{{REVIEW_NOTE}}</div>
+          <div style="margin-top:16px;font-size:12px;line-height:18px;color:#829ab1;">Generated from the saved Literature Scout report using the Research OS email template.</div>
+        </td></tr>
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>

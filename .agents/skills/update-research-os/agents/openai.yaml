@@ -1,0 +1,5 @@
+interface:
+  display_name: "Update Research OS"
+  short_description: "Ingest new resources and refresh the Research OS"
+  default_prompt: "Use $update-research-os to ingest new resources or review changed personal notes, then assess and update their manifesto impact."
+
