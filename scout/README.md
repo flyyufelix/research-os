@@ -20,13 +20,21 @@ It produces candidates for **human review**. It does not automatically add them 
 Each run:
 
 1. reads `manifesto.md`, `library/_index.md`, `scout/scope.md`, and `scout/_seen.md`;
-2. searches for work related to current questions, evidence gaps, uncertainties, and competing ideas;
+2. searches for work related to current questions, evidence gaps, uncertainties, and competing ideas using complementary retrieval methods;
 3. removes items already indexed or previously reported;
 4. ranks the strongest candidates;
 5. saves a dated report under `scout/reports/`;
 6. records each candidate in `scout/_seen.md`.
 
 Each report explains what was searched, what each candidate says, why it may matter, what material was examined, and any limitations.
+
+For scholarly discovery, the default strategy combines three channels when they are available:
+
+- web search for broad and recent discovery, official sources, grey literature, terminology, and verification;
+- OpenAlex for structured scholarly metadata, identifiers, citations, references, and related works;
+- `paper-search-mcp`, or another available scholarly MCP, for multi-index retrieval and lawful open-access discovery.
+
+The channels are complementary rather than interchangeable. A run continues when one is unavailable, but the report must identify the missing method and describe the resulting coverage as degraded. Literature Scout does not install or configure MCPs during a run.
 
 ---
 
@@ -35,13 +43,14 @@ Each report explains what was searched, what each candidate says, why it may mat
 Edit [`scope.md`](scope.md) before the first run. Set:
 
 - your research topics and search vocabulary;
+- the retrieval methods to attempt and the fallback behavior when an MCP is unavailable;
 - source types and specific websites;
 - the lookback period and maximum number of findings;
 - language and timezone;
 - inclusion and exclusion rules;
 - optional email delivery.
 
-The default scope includes scholarly databases, primary repositories, official research organizations, research blogs, and broader web leads. Social posts are off by default. Adapt these choices to your field.
+The default scope attempts web search, OpenAlex, and `paper-search-mcp` or another available scholarly MCP. It includes scholarly databases, primary repositories, official research organizations, research blogs, and broader web leads. Social posts are off by default. Adapt these choices to your field and available tools.
 
 ---
 

@@ -7,6 +7,16 @@
 - Include: university students, academic tasks, task-specific and individual-difference moderators
 - Exclude: music therapy and music education unless they directly test background music during an academic task
 
+## Retrieval methods
+
+- Web search: required for broad discovery, recent work, terminology, and verification
+- OpenAlex: required when accessible for metadata, related works, references, and citations
+- Multi-source scholarly MCP: use `paper-search-mcp` when available; otherwise use another available scholarly MCP covering relevant psychology and education sources
+- Publisher or repository verification: required for shortlisted findings when accessible
+- Citation expansion: one hop from relevant core sources and strong new candidates
+
+If a retrieval method is unavailable, continue with the remaining methods and identify the coverage limitation in the report. Do not install or configure an MCP during the run.
+
 ## Enabled sources
 
 - OpenAlex, Crossref, and Semantic Scholar
