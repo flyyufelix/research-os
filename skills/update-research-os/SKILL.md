@@ -9,6 +9,7 @@ Maintain an existing Research OS incrementally without rebuilding it or silently
 
 ## Load only the relevant procedure
 
+- For any proposed, approved, or published change to `manifesto.md`, read [manifesto-versioning.md](references/manifesto-versioning.md).
 - For PDFs, books, webpages, reports, and YouTube videos, read [external-sources.md](references/external-sources.md). For a long PDF book, thesis, manual, or report, also read [long-pdf-books.md](references/long-pdf-books.md).
 - For personal notes already under `notes/`, or local and exported notes to import there, read [personal-notes.md](references/personal-notes.md).
 - For Notion, OneDrive, Obsidian, Google Drive, or other connected notes, read [connected-notes.md](references/connected-notes.md) and [personal-notes.md](references/personal-notes.md).
@@ -33,9 +34,10 @@ Maintain an existing Research OS incrementally without rebuilding it or silently
    - thesis challenge
    - new direction
 
-8. Update retrieval-oriented sections such as core-source links, personal-note links, search vocabulary, evidence gaps, and uncertainties when directly justified. Link external evidence claims to `library/` and researcher questions, hypotheses, and preferences to `notes/`.
-9. Before changing the central question, thesis, definitions, scope, competing hypotheses, confidence, or research orientation, present the exact current text, proposed edit, supporting sources, counterevidence, uncertainty, and downstream consequences. Apply the change only after explicit approval.
-10. Validate links, provenance, index coverage, reading depth, claim ownership, and any scout-ledger transition. Ensure `manifesto.md` contains no links to `staging-material/` or other disposable staging paths. Report the items processed, manifesto impact, changes made, proposals awaiting approval, and unresolved issues.
+8. If there is no manifesto impact, leave its version unchanged. Otherwise read the manifesto versioning procedure, select the proposed version increment, and prepare all directly justified changes as one reviewable proposal. Include retrieval-oriented updates such as core-source links, personal-note links, search vocabulary, evidence gaps, and uncertainties when warranted. Link external evidence claims to `library/` and researcher questions, hypotheses, and preferences to `notes/`.
+9. Present the proposed version, exact current and proposed text, change rationale, supporting sources, counterevidence, uncertainty, and downstream consequences. Do not edit `manifesto.md` until the researcher explicitly approves the complete proposal, including patch-level changes.
+10. After explicit approval, publish the version according to [manifesto-versioning.md](references/manifesto-versioning.md): update `manifesto.md`, create its immutable approved snapshot, and append the release to `CHANGELOG.md`. If approval is not part of the current request, leave the approved manifesto and version history unchanged.
+11. Validate links, provenance, index coverage, reading depth, claim ownership, version consistency, and any scout-ledger transition. Ensure `manifesto.md` contains no links to `staging-material/` or other disposable staging paths. Report the items processed, manifesto impact, approved versions published, proposals awaiting approval, and unresolved issues.
 
 ## Bootstrap support
 
@@ -44,6 +46,7 @@ When `bootstrap-research-os` uses this procedure, support both its broad mapping
 ## Guardrails
 
 - Never add every resource to the manifesto; promote only durable evidence, decisions, uncertainties, and directions that improve future reasoning or retrieval.
+- Never publish a manifesto version, snapshot, or changelog entry without explicit researcher approval.
 - Never cite disposable staging files from the manifesto.
 - Never add demo-only fields, labels, or content to production notes or source records unless explicitly requested.
 - Never mark a scout candidate `watch` or `dismissed` without an explicit researcher decision.

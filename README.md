@@ -13,6 +13,7 @@ Research OS captures the working memory, current state, research taste, and pref
 - [Components](#components)
 - [Build your first Research OS](#build-your-first-research-os)
 - [Maintain and update the system](#maintain-and-update-the-system)
+- [Manifesto version history](#manifesto-version-history)
 - [Literature Scout](#literature-scout)
 - [FAQ](#faq)
 
@@ -53,6 +54,9 @@ Research OS helps you:
 research-os/
 ├── AGENTS.md                   Project guide for the AI agent
 ├── manifesto.md                Working memory of the research program
+├── CHANGELOG.md                Approved manifesto release history
+├── versions/
+│   └── manifesto/              Immutable approved manifesto snapshots
 ├── library/                    Indexed external sources
 │   ├── _index.md
 │   └── sources/
@@ -74,6 +78,10 @@ The project guide for the AI agent: its purpose, components, and operating rules
 ### `manifesto.md`
 
 The **working memory of your research program** and **the most important file** in the system. It records your questions, hypotheses, scope, uncertainties, research preferences, evidence gaps, and next decisions. It links external evidence to `library/` and your own thinking to `notes/`, giving future searches, writing, and presentations a reliable starting point.
+
+### `CHANGELOG.md` and `versions/manifesto/`
+
+`CHANGELOG.md` explains what changed in each approved manifesto version, why it changed, which AI agent prepared it, and who approved it. `versions/manifesto/` preserves a complete, read-only snapshot of every approved version. These files provide a transparent history without requiring students to use Git.
 
 ### `library/`
 
@@ -124,6 +132,8 @@ One prompt starts a multi-pass build: ChatGPT Work maps the complete collection,
 
 When it finishes, review `manifesto.md`, `library/_index.md`, the source notes, and `notes/research-origin.md`. Clear `staging-material/` only after confirming that the important material was preserved.
 
+The first manifesto is proposed as `v0.1.0` with status `Awaiting review`. After you approve it, the agent marks it approved, saves an immutable snapshot, and creates its changelog entry.
+
 ---
 
 ## Maintain and update the system
@@ -147,6 +157,20 @@ Create or edit a Markdown file under `notes/`, then ask:
 ```text
 Review my new or changed notes and update my Research OS.
 ```
+
+---
+
+## Manifesto version history
+
+Research OS uses simple version numbers for `manifesto.md`:
+
+- `v0.1.0 → v0.2.0` means an approved substantive change to the research question, thesis, definitions, scope, hypotheses, confidence, or direction.
+- `v0.2.0 → v0.2.1` means an approved supporting update such as new evidence, links, vocabulary, uncertainties, or clarification.
+- `v1.0.0` is used only when you explicitly designate the manifesto as the first formal, submitted, or stable research baseline.
+
+The agent first presents a proposed version and explains what would change and why. Your existing approved `manifesto.md` remains unchanged until you explicitly approve the complete proposal. The published version records its timestamp, the AI agent that prepared it, the researcher who approved it, and a short change summary.
+
+Versioning is intentionally lighter elsewhere. Library source notes remain one current file with AI attribution and a short revision history for substantive interpretive changes. Original source files are not overwritten, personal notes preserve the researcher's writing, and scout ledgers remain append-only.
 
 ---
 

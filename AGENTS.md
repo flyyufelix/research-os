@@ -9,6 +9,8 @@ This workspace exists to improve the continuity, quality, and traceability of re
 ## Components
 
 - `manifesto.md`: the evolving synthesis and research compass.
+- `CHANGELOG.md`: the append-only history of approved manifesto versions.
+- `versions/manifesto/`: immutable snapshots of approved manifesto versions.
 - `library/`: external evidence, source notes, preserved originals when appropriate, and the source index.
 - `notes/`: the researcher's canonical, editable personal notes.
 - `scout/`: literature-search scope, seen-item ledger, and dated scouting reports.
@@ -20,6 +22,9 @@ This workspace exists to improve the continuity, quality, and traceability of re
 ## Working rules
 
 - Read `manifesto.md` and the relevant indexes before updating an existing system.
+- After initial approval, treat `manifesto.md` as the latest approved research position. The bootstrap draft may instead be marked `Awaiting review`. Follow `skills/update-research-os/references/manifesto-versioning.md` for proposals, approval, version numbers, timestamps, AI-agent attribution, snapshots, and changelog entries.
+- Treat AI agents as preparers and the researcher as the approver. Do not publish a manifesto change, including a small evidence or retrieval update, without explicit researcher approval.
+- Keep approved manifesto snapshots immutable. Library source notes remain single current files with provenance metadata and lightweight substantive revision histories rather than full version snapshots.
 - Distinguish source claims, researcher statements, agent interpretations, and uncertainty.
 - Preserve source provenance. Never invent evidence, metadata, quotations, timestamps, or reading coverage.
 - During bootstrap, map all available inputs, draft a provisional manifesto, selectively deepen decision-relevant and discovery-oriented material, and refine the manifesto in one coordinated run.
