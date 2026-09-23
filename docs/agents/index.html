@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Connect an AI agent — Research OS</title>
+    <meta name="description" content="Choose a tested AI agent for Research OS or use another agent that can work with local files and follow repository instructions.">
+    <link rel="canonical" href="https://flyyufelix.github.io/research-os/agents/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b2146'/%3E%3Cpath d='M16 17h23l9 9v21H16z' fill='white'/%3E%3Cpath d='M39 17v10h9' fill='%23dff8fc'/%3E%3Cpath d='M22 34h20M22 41h15' stroke='%231670d2' stroke-width='4' stroke-linecap='round'/%3E%3Crect y='55' width='64' height='9' fill='%2308a9c4'/%3E%3C/svg%3E">
+    <script>document.documentElement.classList.add("js")</script>
+    <link rel="stylesheet" href="../assets/styles.css?v=20260922">
+    <script defer src="../assets/site.js?v=20260922"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header"><div class="nav-shell"><a class="brand" href="../" aria-label="Research OS home"><span class="brand-mark" aria-hidden="true">R/</span><span>Research OS</span></a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav">Menu</button><nav class="site-nav" id="site-nav" data-site-nav data-open="false" aria-label="Main navigation"><a href="../getting-started/">Get started</a><a href="./" aria-current="page">AI agents</a><a href="../literature-search/">Literature search</a><a href="../troubleshooting/">Help</a><a class="nav-github" href="https://github.com/flyyufelix/research-os">View on GitHub</a></nav></div></header>
+
+    <main id="main">
+      <section class="page-hero"><div class="shell"><div class="breadcrumbs"><a href="../">Home</a><span>/</span>AI agents</div><p class="eyebrow">Choose your working environment</p><h1>Connect Research OS to an AI agent</h1><p class="lede">The folder structure and prompts stay the same across agent frameworks. Start with one of the tested recommendations below, or use another capable agent you prefer.</p></div></section>
+      <section class="section">
+        <div class="shell docs-layout">
+          <article class="prose">
+            <h2 id="choose">Four tested recommendations</h2>
+            <p>These four agents have been tested with the local project, manifesto workflow, and Literature Scout. They are recommended starting points, not a compatibility limit, and no option is ranked above another.</p>
+            <div class="route-list">
+              <a class="route-link" href="chatgpt-work/"><strong>ChatGPT Work</strong><span>Open the repository as a local project and use its included skill discovery files.</span><b aria-hidden="true">›</b></a>
+              <a class="route-link" href="workbuddy/"><strong>Tencent WorkBuddy</strong><span>Create a local task with the Research OS folder as its working directory.</span><b aria-hidden="true">›</b></a>
+              <a class="route-link" href="qwenwork/"><strong>QwenWork</strong><span>Use the desktop app for direct access to the Research OS folder and workflows.</span><b aria-hidden="true">›</b></a>
+              <a class="route-link" href="doubao-work/"><strong>Doubao Work</strong><span>Create a work task and authorize the Research OS folder as its local project.</span><b aria-hidden="true">›</b></a>
+            </div>
+
+            <div class="callout"><strong>Prefer another agent?</strong> Research OS is framework agnostic. Other agents may also work when they can read and write the project folder, follow <code>AGENTS.md</code>, and run the included workflow instructions.</div>
+
+            <h2 id="shared-flow">The shared workflow</h2>
+            <ol class="instruction-list">
+              <li><h3>Open the correct folder</h3><p>Select the directory containing <code>AGENTS.md</code>, <code>skills/</code>, and <code>staging-material/</code>.</p></li>
+              <li><h3>Keep permissions narrow</h3><p>Allow the agent to work inside the Research OS directory. Review consequential file operations rather than granting access to your whole computer.</p></li>
+              <li><h3>Use plain-language prompts</h3><p>The repository contains the detailed workflow. Your prompt can remain short.</p></li>
+              <li><h3>Review the files</h3><p>Check the manifesto, source notes, and scout reports in the folder instead of relying only on the agent’s chat summary.</p></li>
+            </ol>
+
+            <h2 id="prompts">Core prompts</h2>
+            <h3>First build</h3>
+            <div class="code-block"><pre><code>Build my Research OS using everything in staging-material.</code></pre><button class="copy-button" type="button" data-copy>Copy</button></div>
+            <h3>Add a source</h3>
+            <div class="code-block"><pre><code>Index the attached paper and update my Research OS.</code></pre><button class="copy-button" type="button" data-copy>Copy</button></div>
+            <h3>Scout the literature</h3>
+            <div class="code-block"><pre><code>Run Literature Scout once using scout/scope.md. Save the dated report, but do not index candidates or change manifesto.md.</code></pre><button class="copy-button" type="button" data-copy>Copy</button></div>
+
+            <h2 id="fallback">If a workflow does not start</h2>
+            <p>Use an explicit prompt that points to the canonical workflow. This does not change the workflow; it only tells the agent where to read it.</p>
+            <div class="code-block"><pre><code>Read AGENTS.md and skills/bootstrap-research-os/SKILL.md completely, then build my Research OS using everything in staging-material.</code></pre><button class="copy-button" type="button" data-copy>Copy</button></div>
+            <p>If the agent still cannot read the file, check that you opened the repository root and granted access to that folder.</p>
+
+            <div class="next-nav"><a href="../getting-started/">‹ First-build guide</a><a href="../literature-search/">Literature-search setup ›</a></div>
+          </article>
+          <aside class="toc" aria-label="On this page"><h2>On this page</h2><a href="#choose">Choose an agent</a><a href="#shared-flow">Shared workflow</a><a href="#prompts">Core prompts</a><a href="#fallback">Explicit fallback</a></aside>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><div class="shell"><div class="footer-grid"><div><a class="brand" href="../"><span class="brand-mark" aria-hidden="true">R/</span><span style="color:white">Research OS</span></a><p>A simple, Markdown-based workspace for developing a research project with an AI agent.</p></div><div><h2>Start</h2><a href="../getting-started/">Build your first manifesto</a><a href="./">Connect an AI agent</a><a href="../literature-search/">Run Literature Scout</a></div><div><h2>Project</h2><a href="https://github.com/flyyufelix/research-os">GitHub repository</a><a href="https://github.com/flyyufelix/research-os/tree/main/examples/music-and-studying">Worked example</a><a href="../troubleshooting/">Troubleshooting</a></div></div><div class="footer-note">Open source under the MIT License. Research decisions remain with the researcher.</div></div></footer>
+  </body>
+</html>

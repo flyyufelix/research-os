@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Literature search — Research OS</title>
+    <meta name="description" content="Configure Literature Scout, run a multi-channel search, and review scholarly candidates before adding them to Research OS.">
+    <link rel="canonical" href="https://flyyufelix.github.io/research-os/literature-search/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b2146'/%3E%3Cpath d='M16 17h23l9 9v21H16z' fill='white'/%3E%3Cpath d='M39 17v10h9' fill='%23dff8fc'/%3E%3Cpath d='M22 34h20M22 41h15' stroke='%231670d2' stroke-width='4' stroke-linecap='round'/%3E%3Crect y='55' width='64' height='9' fill='%2308a9c4'/%3E%3C/svg%3E">
+    <script>document.documentElement.classList.add("js")</script>
+    <link rel="stylesheet" href="../assets/styles.css?v=20260922">
+    <script defer src="../assets/site.js?v=20260922"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header"><div class="nav-shell"><a class="brand" href="../" aria-label="Research OS home"><span class="brand-mark" aria-hidden="true">R/</span><span>Research OS</span></a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav">Menu</button><nav class="site-nav" id="site-nav" data-site-nav data-open="false" aria-label="Main navigation"><a href="../getting-started/">Get started</a><a href="../agents/">AI agents</a><a href="./" aria-current="page">Literature search</a><a href="../troubleshooting/">Help</a><a class="nav-github" href="https://github.com/flyyufelix/research-os">View on GitHub</a></nav></div></header>
+
+    <main id="main">
+      <section class="page-hero"><div class="shell"><div class="breadcrumbs"><a href="../">Home</a><span>/</span>Literature search</div><p class="eyebrow">Literature Scout</p><h1>Search from your research gaps</h1><p class="lede">Use the current manifesto to find recent work, missing evidence, competing explanations, and follow-ups to core sources. Review every candidate before it becomes part of the Research OS.</p></div></section>
+
+      <section class="section">
+        <div class="shell docs-layout">
+          <article class="prose">
+            <h2 id="how-it-works">How Literature Scout works</h2>
+            <div class="definition"><p>Literature Scout produces a ranked discovery report for human review. It does not automatically index papers or change <code>manifesto.md</code>.</p></div>
+            <p>Each run reads your manifesto, existing library, search scope, and previously seen candidates. It then searches several focused query lanes and records what worked, what failed, and what material it examined.</p>
+            <ol class="instruction-list">
+              <li><h3>Build queries from the manifesto</h3><p>Search the main direction, evidence gaps, competing hypotheses, and related work around core sources.</p></li>
+              <li><h3>Use complementary channels</h3><p>Combine broad web discovery with structured scholarly metadata and citation links when those tools are available.</p></li>
+              <li><h3>Deduplicate and rank</h3><p>Remove items already indexed or previously reported, then rank candidates by explicit relevance and source quality.</p></li>
+              <li><h3>Save a reviewable report</h3><p>Record discovery path, verification source, material examined, caveats, and the candidate’s connection to the manifesto.</p></li>
+            </ol>
+
+            <h2 id="configure">1. Configure the search</h2>
+            <p>Open <code>scout/scope.md</code> after your first manifesto exists. Replace the placeholders with settings for your project.</p>
+            <div class="code-block"><pre><code>## Research focus
+
+- Domains: [your disciplines or research areas]
+- Search vocabulary: [terms and synonyms not already in manifesto.md]
+- Nearby topics to include: [optional]
+- Topics to exclude: [optional]
+
+## Run limits
+
+- Lookback period: 30 days
+- Maximum findings: 5
+- Languages: English
+- Timezone: Asia/Hong_Kong</code></pre><button class="copy-button" type="button" data-copy>Copy</button></div>
+            <p>Keep the default retrieval policy unless your field needs different databases. A maximum of five findings is a useful starting point because it forces the scout to rank rather than dump results.</p>
+
+            <h2 id="manual-run">2. Run one manual test</h2>
+            <div class="code-block"><pre><code>Run Literature Scout once using scout/scope.md. Save the dated report, but do not index candidates or change manifesto.md.</code></pre><button class="copy-button" type="button" data-copy>Copy</button></div>
+            <p>Open the new file under <code>scout/reports/</code>. A useful report should explain its searches, retrieval tools, coverage limits, duplicates, and exclusion decisions—not only list titles.</p>
+
+            <h2 id="review">3. Review candidates</h2>
+            <ul class="checklist">
+              <li>The candidate has a direct connection to a manifesto question, gap, uncertainty, or competing hypothesis.</li>
+              <li>The report identifies whether the assessment used metadata, an abstract, a full post, or fuller text.</li>
+              <li>The title, authors, date, DOI or stable identifier, and canonical URL were verified where possible.</li>
+              <li>Blog posts and news are labeled as leads rather than treated as primary evidence.</li>
+              <li>Unavailable databases or failed retrieval methods are visible in the coverage section.</li>
+            </ul>
+            <p>For a useful candidate, ask the update workflow to index it:</p>
+            <div class="code-block"><pre><code>Index candidate 2 from the latest scout report and update my Research OS.</code></pre><button class="copy-button" type="button" data-copy>Copy</button></div>
+            <p><a href="https://github.com/flyyufelix/research-os/blob/main/examples/music-and-studying/scout/reports/2026-08-30.md">See a completed scout report</a> with ranked findings, relevance explanations, caveats, and coverage notes.</p>
+
+            <h2 id="mcp">Optional: connect scholarly MCP servers</h2>
+            <p>MCP is a standard way for an AI agent to call external tools and data services. Scholarly MCP servers can add structured metadata, stable identifiers, citation relationships, and open-access discovery to the broad web search.</p>
+            <div class="notice">
+              <p class="notice-title">Start without MCP</p>
+              <p>Run the basic scout once using ordinary web search. Add an MCP only after the baseline workflow works and you understand what access the server requests.</p>
+            </div>
+
+            <h2 id="openalex">Recommended first connection: OpenAlex</h2>
+            <p>OpenAlex provides an official remote MCP server. It supports structured literature queries, citation and reference traversal, related works, author and institution discovery, and identifier checks.</p>
+            <div class="code-block"><pre><code>https://mcp.openalex.org/mcp</code></pre><button class="copy-button" type="button" data-copy>Copy</button></div>
+            <h3>Ask your agent to guide the setup</h3>
+            <p>The simplest route is to give your agent the MCP URL and let it explain the controls available in its current version. Paste this into ChatGPT Work, Tencent WorkBuddy, QwenWork, Doubao Work, or another agent you prefer:</p>
+            <div class="code-block"><pre><code>Help me connect the official OpenAlex MCP server to this agent:
+https://mcp.openalex.org/mcp
+
+Walk me through the setup step by step. Explain each permission before I approve it, then test the connection with one narrow scholarly query. If this version cannot connect to custom MCP servers, tell me clearly and use ordinary web search instead.</code></pre><button class="copy-button" type="button" data-copy>Copy</button></div>
+            <ol>
+              <li>Paste the prompt into the agent you are using for Research OS.</li>
+              <li>Follow its current on-screen instructions and review every requested permission.</li>
+              <li>After the test succeeds, run Literature Scout again and compare the coverage with your baseline report.</li>
+            </ol>
+            <p>Interface names change between products and versions, so the agent’s live guidance is more reliable than a fixed menu path. You can also consult the <a href="https://help.openalex.org/access/mcp/">official OpenAlex MCP guide</a>.</p>
+
+            <h2 id="paper-search">Advanced option: paper-search-mcp</h2>
+            <p><code>paper-search-mcp</code> is a third-party, multi-source server for searching scholarly indexes and finding lawful open-access copies. Its installation details and supported providers can change, so follow the maintained project instructions rather than copying an old configuration.</p>
+            <p><a class="button secondary" href="https://github.com/openags/paper-search-mcp">Open paper-search-mcp documentation</a></p>
+            <p>If you want to try it, ask your agent to review the maintained instructions and guide you interactively:</p>
+            <div class="code-block"><pre><code>Help me evaluate and set up paper-search-mcp for this Research OS project:
+https://github.com/openags/paper-search-mcp
+
+Review the current installation instructions, explain what will be installed and what access it requests, then guide me step by step. Do not store credentials in the repository. If setup is not available in this agent, continue with ordinary web search.</code></pre><button class="copy-button" type="button" data-copy>Copy</button></div>
+            <div class="notice warning">
+              <p class="notice-title">Keep restricted sources off</p>
+              <p>Prefer publishers, repositories, and open-access services. Research OS does not recommend or enable Sci-Hub. Do not bypass access restrictions.</p>
+            </div>
+
+            <h2 id="security">Connection safety</h2>
+            <ul class="checklist">
+              <li>Review the server’s publisher, source code, permissions, and data policy.</li>
+              <li>Prefer remote OAuth or a narrowly scoped project configuration.</li>
+              <li>Never store API keys, tokens, webhook URLs, or personal email addresses in the public repository.</li>
+              <li>Limit local file access to the Research OS directory.</li>
+              <li>Verify shortlisted findings against a publisher, DOI record, or primary repository.</li>
+            </ul>
+
+            <h2 id="coverage">Describe coverage honestly</h2>
+            <p>More tools improve discovery, but they do not make a search exhaustive. A scout report must identify failed or missing retrieval methods and describe the resulting coverage as limited or degraded. MCP output still requires source verification and researcher judgment.</p>
+
+            <h2 id="schedule">Schedule only after the manual run</h2>
+            <p>Once the scope produces useful results, ask your agent to schedule the same bounded workflow. A weekly run is a reasonable starting point.</p>
+            <div class="code-block"><pre><code>Create a local scheduled task that runs Literature Scout every Monday at 8:00 AM Hong Kong time. Follow scout/scope.md, save the report, and do not index candidates or change manifesto.md.</code></pre><button class="copy-button" type="button" data-copy>Copy</button></div>
+            <p>A local schedule needs the computer, project, and agent application to be available. Cloud schedules need authorized access to lasting project files.</p>
+
+            <div class="source-list">Research service references: <a href="https://help.openalex.org/access/mcp/">OpenAlex MCP</a> and <a href="https://github.com/openags/paper-search-mcp">paper-search-mcp</a>. Research OS workflow reference: <a href="https://github.com/flyyufelix/research-os/blob/main/scout/README.md">Literature Scout guide</a>.</div>
+            <div class="next-nav"><a href="../getting-started/">‹ First-build guide</a><a href="../troubleshooting/">Troubleshooting ›</a></div>
+          </article>
+          <aside class="toc" aria-label="On this page"><h2>On this page</h2><a href="#how-it-works">How it works</a><a href="#configure">Configure</a><a href="#manual-run">Manual run</a><a href="#review">Review candidates</a><a href="#mcp">MCP overview</a><a href="#openalex">OpenAlex</a><a href="#paper-search">paper-search-mcp</a><a href="#security">Security</a><a href="#coverage">Coverage</a><a href="#schedule">Scheduling</a></aside>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><div class="shell"><div class="footer-grid"><div><a class="brand" href="../"><span class="brand-mark" aria-hidden="true">R/</span><span style="color:white">Research OS</span></a><p>A simple, Markdown-based workspace for developing a research project with an AI agent.</p></div><div><h2>Start</h2><a href="../getting-started/">Build your first manifesto</a><a href="../agents/">Connect an AI agent</a><a href="./">Run Literature Scout</a></div><div><h2>Project</h2><a href="https://github.com/flyyufelix/research-os">GitHub repository</a><a href="https://github.com/flyyufelix/research-os/tree/main/examples/music-and-studying">Worked example</a><a href="../troubleshooting/">Troubleshooting</a></div></div><div class="footer-note">Open source under the MIT License. Research decisions remain with the researcher.</div></div></footer>
+  </body>
+</html>

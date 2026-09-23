@@ -6,6 +6,8 @@ All important content is stored in ordinary text files. You can read and edit th
 
 Research OS captures the working memory, current state, research taste, and preferences of your project in `manifesto.md`. This is the most important file in the system: every current and future Research OS workflow uses it as the primary guide for searching, evaluating sources, brainstorming, writing, and creating presentations.
 
+> **New to Research OS?** Follow the [beginner website](https://flyyufelix.github.io/research-os/) to download the project, build your first `manifesto.md`, connect an AI agent, and run Literature Scout.
+
 ## Quick navigation
 
 - [What Research OS does](#what-research-os-does)

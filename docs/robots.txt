@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://flyyufelix.github.io/research-os/sitemap.xml
+

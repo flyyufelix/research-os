@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Troubleshooting — Research OS</title>
+    <meta name="description" content="Fix common Research OS setup, project-folder, permission, source-reading, and literature-search problems.">
+    <link rel="canonical" href="https://flyyufelix.github.io/research-os/troubleshooting/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b2146'/%3E%3Cpath d='M16 17h23l9 9v21H16z' fill='white'/%3E%3Cpath d='M39 17v10h9' fill='%23dff8fc'/%3E%3Cpath d='M22 34h20M22 41h15' stroke='%231670d2' stroke-width='4' stroke-linecap='round'/%3E%3Crect y='55' width='64' height='9' fill='%2308a9c4'/%3E%3C/svg%3E">
+    <script>document.documentElement.classList.add("js")</script><link rel="stylesheet" href="../assets/styles.css?v=20260922"><script defer src="../assets/site.js?v=20260922"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header"><div class="nav-shell"><a class="brand" href="../" aria-label="Research OS home"><span class="brand-mark" aria-hidden="true">R/</span><span>Research OS</span></a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav">Menu</button><nav class="site-nav" id="site-nav" data-site-nav data-open="false" aria-label="Main navigation"><a href="../getting-started/">Get started</a><a href="../agents/">AI agents</a><a href="../literature-search/">Literature search</a><a href="./" aria-current="page">Help</a><a class="nav-github" href="https://github.com/flyyufelix/research-os">View on GitHub</a></nav></div></header>
+    <main id="main">
+      <section class="page-hero"><div class="shell"><div class="breadcrumbs"><a href="../">Home</a><span>/</span>Troubleshooting</div><p class="eyebrow">Common problems</p><h1>Get the workflow moving again</h1><p class="lede">Most setup problems come from opening the wrong folder, missing file permissions, or expecting an unavailable search connection.</p></div></section>
+      <section class="section"><div class="shell docs-layout"><article class="prose">
+        <h2 id="folder">Project and folder problems</h2>
+        <details open><summary>The agent cannot find AGENTS.md or the skills</summary><div><p>Open the repository root—the folder that directly contains <code>AGENTS.md</code>, <code>skills/</code>, <code>scout/</code>, and <code>staging-material/</code>. If you downloaded a ZIP, check that you did not select an outer folder containing another nested <code>research-os-main</code> folder.</p></div></details>
+        <details><summary>The agent writes files somewhere else</summary><div><p>Create a new local task and select the Research OS directory before sending the prompt. Confirm that the task’s displayed working directory matches the repository root.</p></div></details>
+        <details><summary>The ZIP contains a folder named research-os-main</summary><div><p>That is normal. You may rename it to <code>research-os</code>. Open this extracted folder directly in the agent.</p></div></details>
+
+        <h2 id="permissions">Permission problems</h2>
+        <details><summary>The agent can read files but cannot create manifesto.md</summary><div><p>Grant read and write access to the Research OS directory. You do not need to grant access to your home folder, entire drive, or unrelated projects.</p></div></details>
+        <details><summary>The agent repeatedly asks for approval</summary><div><p>Approve ordinary file creation inside the selected project as needed. Keep review checkpoints for actions outside the folder, external messages, credentials, deletions, and other consequential operations.</p></div></details>
+        <details><summary>The workflow does not start automatically</summary><div><p>Use an explicit instruction:</p><div class="code-block"><pre><code>Read AGENTS.md and skills/bootstrap-research-os/SKILL.md completely, then build my Research OS using everything in staging-material.</code></pre><button class="copy-button" type="button" data-copy>Copy</button></div></div></details>
+
+        <h2 id="manifesto">Manifesto and source problems</h2>
+        <details><summary>The agent asks me to write manifesto.md myself</summary><div><p>You only need to write the starting material in <code>staging-material/ideas.md</code>. Ask the agent to follow the bootstrap workflow; it should preserve your starting ideas and draft the manifesto for review.</p></div></details>
+        <details><summary>The manifesto sounds too certain</summary><div><p>Do not approve it. Ask the agent to distinguish source-supported claims, your own statements, agent interpretation, and uncertainty. Preserve competing hypotheses and state what evidence could change the current view.</p></div></details>
+        <details><summary>A long book was not read from cover to cover</summary><div><p>This is expected. Research OS maps long works, then closely reads selected sections that can affect the research direction. Check the source note for exact chapters or pages examined.</p></div></details>
+        <details><summary>A PDF cannot be accessed or parsed</summary><div><p>Keep the source in staging, record the failure, and continue with accessible material. Try a lawful open-access copy or a text-enabled PDF. Do not claim the inaccessible source was reviewed.</p></div></details>
+
+        <h2 id="search">Literature-search problems</h2>
+        <details><summary>Web search works but an MCP server is unavailable</summary><div><p>Continue the scout with web search and any other available scholarly connection. The report should name the missing method and describe structured or citation-graph coverage as limited.</p></div></details>
+        <details><summary>OpenAlex asks me to sign in</summary><div><p>The official OpenAlex remote MCP uses account authorization. Confirm that you are on <code>mcp.openalex.org</code>, review the access request, and do not paste tokens into the repository.</p></div></details>
+        <details><summary>The report returns too many weak results</summary><div><p>Narrow <code>scout/scope.md</code>: add field-specific terms, exclusions, important populations, locations, methods, or core sources. Keep the maximum findings small while tuning.</p></div></details>
+        <details><summary>The same paper appears again</summary><div><p>Check <code>scout/_seen.md</code> and <code>library/_index.md</code>. Literature Scout should deduplicate by DOI or another stable identifier before using normalized title and year.</p></div></details>
+        <details><summary>Can I call the search comprehensive?</summary><div><p>Only make a strong coverage claim when every required method was attempted successfully and the scope justifies it. Otherwise describe what was searched and state the limitations directly.</p></div></details>
+
+        <h2 id="still-stuck">Still stuck?</h2>
+        <p>Ask your agent to diagnose the workspace without changing files:</p>
+        <div class="code-block"><pre><code>Inspect this Research OS project and explain why the requested workflow did not run. Do not modify any files. Check the working directory, permissions, required inputs, and available research tools.</code></pre><button class="copy-button" type="button" data-copy>Copy</button></div>
+        <p>You can also <a href="https://github.com/flyyufelix/research-os/issues">open a GitHub issue</a> with the agent name, operating system, prompt used, and a description of the result. Remove credentials and private research material first.</p>
+        <div class="next-nav"><a href="../agents/">‹ Agent guides</a><a href="../literature-search/">Literature-search guide ›</a></div>
+      </article><aside class="toc" aria-label="On this page"><h2>On this page</h2><a href="#folder">Folders</a><a href="#permissions">Permissions</a><a href="#manifesto">Manifesto and sources</a><a href="#search">Literature search</a><a href="#still-stuck">Still stuck?</a></aside></div></section>
+    </main>
+    <footer class="site-footer"><div class="shell"><div class="footer-grid"><div><a class="brand" href="../"><span class="brand-mark" aria-hidden="true">R/</span><span style="color:white">Research OS</span></a><p>A simple, Markdown-based workspace for developing a research project with an AI agent.</p></div><div><h2>Start</h2><a href="../getting-started/">Build your first manifesto</a><a href="../agents/">Connect an AI agent</a><a href="../literature-search/">Run Literature Scout</a></div><div><h2>Project</h2><a href="https://github.com/flyyufelix/research-os">GitHub repository</a><a href="https://github.com/flyyufelix/research-os/tree/main/examples/music-and-studying">Worked example</a><a href="./">Troubleshooting</a></div></div><div class="footer-note">Open source under the MIT License. Research decisions remain with the researcher.</div></div></footer>
+  </body>
+</html>

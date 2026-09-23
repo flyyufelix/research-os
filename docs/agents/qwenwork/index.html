@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QwenWork setup — Research OS</title>
+    <meta name="description" content="Open Research OS in QwenWork, build manifesto.md, and run Literature Scout.">
+    <link rel="canonical" href="https://flyyufelix.github.io/research-os/agents/qwenwork/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b2146'/%3E%3Cpath d='M16 17h23l9 9v21H16z' fill='white'/%3E%3Cpath d='M39 17v10h9' fill='%23dff8fc'/%3E%3Cpath d='M22 34h20M22 41h15' stroke='%231670d2' stroke-width='4' stroke-linecap='round'/%3E%3Crect y='55' width='64' height='9' fill='%2308a9c4'/%3E%3C/svg%3E">
+    <script>document.documentElement.classList.add("js")</script><link rel="stylesheet" href="../../assets/styles.css?v=20260922"><script defer src="../../assets/site.js?v=20260922"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header"><div class="nav-shell"><a class="brand" href="../../" aria-label="Research OS home"><span class="brand-mark" aria-hidden="true">R/</span><span>Research OS</span></a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav">Menu</button><nav class="site-nav" id="site-nav" data-site-nav data-open="false" aria-label="Main navigation"><a href="../../getting-started/">Get started</a><a href="../" aria-current="page">AI agents</a><a href="../../literature-search/">Literature search</a><a href="../../troubleshooting/">Help</a><a class="nav-github" href="https://github.com/flyyufelix/research-os">View on GitHub</a></nav></div></header>
+    <main id="main">
+      <section class="page-hero"><div class="shell"><div class="breadcrumbs"><a href="../../">Home</a><span>/</span><a href="../">AI agents</a><span>/</span>QwenWork</div><p class="eyebrow">Agent setup</p><h1>Use Research OS with QwenWork</h1><p class="lede">Use the desktop application for direct local-file access, then run the Research OS workflows from the repository itself.</p><div class="meta-row"><strong>Research OS flow: verified</strong><span>Last verified: September 2026</span><a href="https://docs.qwenwork.ai/getting-started/quick-start">Official quickstart</a></div></div></section>
+      <section class="section"><div class="shell docs-layout"><article class="prose">
+        <h2 id="setup">Setup</h2>
+        <ol class="instruction-list">
+          <li><h3>Install the desktop app</h3><p>The desktop version can work directly with local files. Sign in and start a new task.</p></li>
+          <li><h3>Add the Research OS folder</h3><p>Select or attach the folder that contains <code>AGENTS.md</code>. Keep the project root available as the task’s working context.</p></li>
+          <li><h3>Point QwenWork to the repository workflow</h3><p>Describe the task normally. If needed, name the canonical workflow file so QwenWork reads the full instructions before acting.</p></li>
+          <li><h3>Start the first build</h3><div class="code-block"><pre><code>Build my Research OS using everything in staging-material.</code></pre><button class="copy-button" type="button" data-copy>Copy</button></div></li>
+        </ol>
+
+        <h2 id="verify">Verify the result</h2>
+        <ul class="checklist"><li><code>manifesto.md</code> records the current research direction and uncertainty.</li><li>Your original ideas remain preserved in <code>notes/research-origin.md</code>.</li><li>Source notes distinguish mapped material from closely read material.</li><li>The proposed manifesto waits for explicit approval.</li></ul>
+
+        <h2 id="scout">Run Literature Scout</h2>
+        <div class="code-block"><pre><code>Run Literature Scout once using scout/scope.md. Save the dated report, but do not index candidates or change manifesto.md.</code></pre><button class="copy-button" type="button" data-copy>Copy</button></div>
+        <p>QwenWork manages external services through <strong>Extensions → Connectors</strong>. Use a supported scholarly connector when available; otherwise run the scout with ordinary web search and record the coverage limitation.</p>
+
+        <h2 id="troubleshoot">If QwenWork misses the workflow</h2>
+        <div class="code-block"><pre><code>Read AGENTS.md and skills/bootstrap-research-os/SKILL.md completely, then build my Research OS using everything in staging-material.</code></pre><button class="copy-button" type="button" data-copy>Copy</button></div>
+        <p>If it cannot open the files, use the desktop application and add the repository root as folder context. In QwenWork, <code>@</code> adds files or folders to context; it does not invoke a skill.</p>
+        <div class="source-list">Platform references: <a href="https://docs.qwenwork.ai/getting-started/quick-start">QwenWork Quick Start</a>, <a href="https://docs.qwenwork.ai/desktop/skills">Skills</a>, and <a href="https://docs.qwenwork.ai/desktop/connectors">Connectors</a>.</div>
+        <div class="next-nav"><a href="../">‹ All agent guides</a><a href="../../getting-started/">Build the manifesto ›</a></div>
+      </article><aside class="toc" aria-label="On this page"><h2>On this page</h2><a href="#setup">Setup</a><a href="#verify">Verify</a><a href="#scout">Literature Scout</a><a href="#troubleshoot">Troubleshooting</a></aside></div></section>
+    </main>
+    <footer class="site-footer"><div class="shell"><div class="footer-grid"><div><a class="brand" href="../../"><span class="brand-mark" aria-hidden="true">R/</span><span style="color:white">Research OS</span></a><p>A simple, Markdown-based workspace for developing a research project with an AI agent.</p></div><div><h2>Start</h2><a href="../../getting-started/">Build your first manifesto</a><a href="../">Connect an AI agent</a><a href="../../literature-search/">Run Literature Scout</a></div><div><h2>Project</h2><a href="https://github.com/flyyufelix/research-os">GitHub repository</a><a href="https://github.com/flyyufelix/research-os/tree/main/examples/music-and-studying">Worked example</a><a href="../../troubleshooting/">Troubleshooting</a></div></div><div class="footer-note">Open source under the MIT License. Research decisions remain with the researcher.</div></div></footer>
+  </body>
+</html>

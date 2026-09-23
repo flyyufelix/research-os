@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Get started — Research OS</title>
+    <meta name="description" content="Download Research OS, add your initial ideas, and use an AI agent to build your first manifesto.md.">
+    <link rel="canonical" href="https://flyyufelix.github.io/research-os/getting-started/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b2146'/%3E%3Cpath d='M16 17h23l9 9v21H16z' fill='white'/%3E%3Cpath d='M39 17v10h9' fill='%23dff8fc'/%3E%3Cpath d='M22 34h20M22 41h15' stroke='%231670d2' stroke-width='4' stroke-linecap='round'/%3E%3Crect y='55' width='64' height='9' fill='%2308a9c4'/%3E%3C/svg%3E">
+    <script>document.documentElement.classList.add("js")</script>
+    <link rel="stylesheet" href="../assets/styles.css?v=20260922">
+    <script defer src="../assets/site.js?v=20260922"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="nav-shell">
+        <a class="brand" href="../" aria-label="Research OS home"><span class="brand-mark" aria-hidden="true">R/</span><span>Research OS</span></a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav class="site-nav" id="site-nav" data-site-nav data-open="false" aria-label="Main navigation">
+          <a href="./" aria-current="page">Get started</a>
+          <a href="../agents/">AI agents</a>
+          <a href="../literature-search/">Literature search</a>
+          <a href="../troubleshooting/">Help</a>
+          <a class="nav-github" href="https://github.com/flyyufelix/research-os">View on GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="shell">
+          <div class="breadcrumbs"><a href="../">Home</a><span>/</span>Get started</div>
+          <p class="eyebrow">First build</p>
+          <h1>Build your first research manifesto</h1>
+          <p class="lede">Begin with rough ideas and optional source material. The included workflow maps what you provide, drafts a working research direction, and leaves the final approval to you.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell docs-layout">
+          <article class="prose">
+            <h2 id="before-you-start">Before you start</h2>
+            <p>You need a local copy of Research OS and an AI agent that can work with a project folder. Git is optional. You can read every output in Obsidian or any text editor.</p>
+            <div class="notice">
+              <p class="notice-title">Your goal for this guide</p>
+              <p>Finish with a proposed <code>manifesto.md</code> marked <strong>Awaiting review</strong>. Approval happens only after you check the draft.</p>
+            </div>
+
+            <h2 id="download">1. Download Research OS</h2>
+            <div class="split">
+              <div>
+                <h3>Without Git</h3>
+                <p>Download the ZIP, open it, and move the extracted <code>research-os-main</code> folder somewhere easy to find.</p>
+                <p><a class="button secondary" href="https://github.com/flyyufelix/research-os/archive/refs/heads/main.zip">Download ZIP</a></p>
+              </div>
+              <div>
+                <h3>With Git</h3>
+                <p>Clone the repository so you can pull future updates.</p>
+                <div class="code-block">
+                  <pre><code>git clone https://github.com/flyyufelix/research-os.git</code></pre>
+                  <button class="copy-button" type="button" data-copy>Copy</button>
+                </div>
+              </div>
+            </div>
+
+            <h2 id="ideas">2. Write your starting ideas</h2>
+            <p>Open <code>staging-material/ideas.md</code> and replace its placeholder text. Fragments are fine. Include disagreements and uncertainty rather than forcing a clean thesis too early.</p>
+            <div class="code-block">
+              <pre><code># My starting point
+
+## Topic or problem
+What am I trying to understand?
+
+## Questions
+- What is my main question?
+- What smaller questions support it?
+
+## Current hunches
+- What do I currently suspect?
+- What might prove me wrong?
+
+## Scope and boundaries
+- Who, where, and what period am I studying?
+- What is outside this project?
+
+## Research preferences
+- What kinds of evidence do I trust most?
+- Which methods, disciplines, or perspectives matter?
+
+## Known sources and gaps
+- What have I already read?
+- What evidence is still missing?</code></pre>
+              <button class="copy-button" type="button" data-copy>Copy</button>
+            </div>
+            <p>You are not writing <code>manifesto.md</code> yet. Your agent will synthesize the manifesto from this preserved starting point and any other material you add.</p>
+
+            <h2 id="materials">3. Add material if you have it</h2>
+            <ul class="checklist">
+              <li>Put papers, theses, reports, or PDF books in <code>staging-material/papers/</code>.</li>
+              <li>Put your own Markdown notes in <code>staging-material/personal-notes/</code>.</li>
+              <li>Leave these folders empty if you are beginning with ideas alone.</li>
+            </ul>
+            <p>The bootstrap workflow first maps the whole collection. It reads deeply only where the material could affect a central question, hypothesis, definition, or decision.</p>
+
+            <h2 id="agent">4. Open the folder in an AI agent</h2>
+            <p>Select the folder that directly contains <code>AGENTS.md</code>, <code>skills/</code>, <code>scout/</code>, and <code>staging-material/</code>. Do not select the parent Downloads folder.</p>
+            <div class="route-list">
+              <a class="route-link" href="../agents/chatgpt-work/"><strong>ChatGPT Work</strong><span>Open a local project folder in the desktop app.</span><b aria-hidden="true">›</b></a>
+              <a class="route-link" href="../agents/workbuddy/"><strong>Tencent WorkBuddy</strong><span>Create a local task with the Research OS working directory.</span><b aria-hidden="true">›</b></a>
+              <a class="route-link" href="../agents/qwenwork/"><strong>QwenWork</strong><span>Use the desktop app with access to the local folder.</span><b aria-hidden="true">›</b></a>
+              <a class="route-link" href="../agents/doubao-work/"><strong>Doubao Work</strong><span>Use a work task with the local computer project enabled.</span><b aria-hidden="true">›</b></a>
+            </div>
+
+            <h2 id="build">5. Run the first build</h2>
+            <p>Start a new task in the project and send this prompt:</p>
+            <div class="code-block">
+              <pre><code>Build my Research OS using everything in staging-material.</code></pre>
+              <button class="copy-button" type="button" data-copy>Copy</button>
+            </div>
+            <p>The agent should preserve your original <code>ideas.md</code> as <code>notes/research-origin.md</code>, map your sources, and create a provisional manifesto. Long books are mapped and selectively read rather than treated as fully examined.</p>
+
+            <h2 id="review">6. Review the result</h2>
+            <p>Before approving anything, check these outputs:</p>
+            <ul class="checklist">
+              <li><code>manifesto.md</code> states the question, scope, working hypotheses, uncertainties, evidence gaps, and next decisions.</li>
+              <li><code>notes/research-origin.md</code> matches your initial ideas without silent rewriting.</li>
+              <li><code>library/_index.md</code> lists the external sources that were processed.</li>
+              <li>Each source note states what material was actually examined and what remains unread.</li>
+              <li>Claims from sources link to <code>library/</code>; your own thinking links to <code>notes/</code>.</li>
+              <li>The manifesto is proposed as <code>v0.1.0</code> with status <strong>Awaiting review</strong>.</li>
+            </ul>
+            <div class="notice warning">
+              <p class="notice-title">Approval is a real checkpoint</p>
+              <p>The AI agent prepares the research position; you approve it. Ask for revisions if the manifesto misstates your ideas, overstates evidence, or removes productive disagreement.</p>
+            </div>
+            <p><a href="https://github.com/flyyufelix/research-os/tree/main/examples/music-and-studying">Explore the completed music-and-studying example</a> to compare its raw ideas, personal notes, papers, source records, manifesto, and scout report.</p>
+
+            <h2 id="approve">7. Approve or revise</h2>
+            <p>If the draft is accurate, approve it explicitly:</p>
+            <div class="code-block">
+              <pre><code>I have reviewed manifesto.md and approve the proposed v0.1.0. Publish this version according to the Research OS versioning workflow.</code></pre>
+              <button class="copy-button" type="button" data-copy>Copy</button>
+            </div>
+            <p>Approval creates the first immutable manifesto snapshot and changelog entry. If the draft needs work, describe the changes instead of approving it.</p>
+
+            <h2 id="next">What comes next</h2>
+            <p>Once the manifesto reflects your current direction, use Literature Scout to look for evidence that fills or challenges its gaps.</p>
+            <div class="next-nav">
+              <a href="../agents/">Choose an AI agent</a>
+              <a href="../literature-search/">Set up literature search ›</a>
+            </div>
+          </article>
+
+          <aside class="toc" aria-label="On this page">
+            <h2>On this page</h2>
+            <a href="#before-you-start">Before you start</a>
+            <a href="#download">Download</a>
+            <a href="#ideas">Write your ideas</a>
+            <a href="#materials">Add material</a>
+            <a href="#agent">Open an agent</a>
+            <a href="#build">Run the build</a>
+            <a href="#review">Review</a>
+            <a href="#approve">Approve or revise</a>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell">
+        <div class="footer-grid">
+          <div><a class="brand" href="../"><span class="brand-mark" aria-hidden="true">R/</span><span style="color:white">Research OS</span></a><p>A simple, Markdown-based workspace for developing a research project with an AI agent.</p></div>
+          <div><h2>Start</h2><a href="./">Build your first manifesto</a><a href="../agents/">Connect an AI agent</a><a href="../literature-search/">Run Literature Scout</a></div>
+          <div><h2>Project</h2><a href="https://github.com/flyyufelix/research-os">GitHub repository</a><a href="https://github.com/flyyufelix/research-os/tree/main/examples/music-and-studying">Worked example</a><a href="../troubleshooting/">Troubleshooting</a></div>
+        </div>
+        <div class="footer-note">Open source under the MIT License. Research decisions remain with the researcher.</div>
+      </div>
+    </footer>
+  </body>
+</html>
